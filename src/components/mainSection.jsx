@@ -1,12 +1,11 @@
 import React from "react";
-import Components from "./components";
+import Parts from "./parts";
 import Money from "./money";
 
-const MainSection = () => {
+const MainSection = ({ parts, onBuy, onSell }) => {
   return (
     <div className="main-section">
-      <Money />
-      <Components />
+      <Parts parts={parts} onBuy={onBuy} onSell={onSell} />
     </div>
   );
 };

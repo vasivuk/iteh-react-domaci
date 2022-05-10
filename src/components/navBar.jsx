@@ -2,8 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { AiFillHome } from "react-icons/ai";
 import { GiSailboat } from "react-icons/gi";
+import Money from "./money";
 
-const NavBar = () => {
+const NavBar = ({ money }) => {
   return (
     <div className="navbar">
       <ul>
@@ -20,6 +21,7 @@ const NavBar = () => {
           </Link>
         </li>
       </ul>
+      <Money money={money} />
     </div>
   );
 };
