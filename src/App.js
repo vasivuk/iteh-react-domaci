@@ -6,6 +6,7 @@ import Ship from "./components/ship";
 import MainSection from "./components/mainSection";
 import Footer from "./components/footer";
 import { useState } from "react";
+import Background from "./components/background.jsx";
 
 function App() {
   const [money, setMoney] = useState(500000);
@@ -46,6 +47,32 @@ function App() {
       level: 0,
       image: "https://freesvg.org/img/pirate_hat.png",
     },
+    {
+      id: 4,
+      title: "Anchors",
+      description:
+        "If only Titanic had good anchors...Buy these so your ship can slow down quickly",
+      price: "14000",
+      level: 0,
+      image: "https://www.svgrepo.com/show/40166/anchor.svg",
+    },
+    {
+      id: 5,
+      title: "Wheel",
+      description:
+        "Good wheel mechanism is essential for steering a large ship.",
+      price: "13000",
+      level: 0,
+      image: "https://freesvg.org/img/captains_wheel.png",
+    },
+    {
+      id: 6,
+      title: "Hull",
+      description: "Upgrade your ship hull for more durability",
+      price: "43000",
+      level: 0,
+      image: "https://www.svgrepo.com/show/198988/board-wood.svg",
+    },
   ]);
 
   const buyPart = (id) => {
@@ -85,6 +112,7 @@ function App() {
 
   return (
     <BrowserRouter className="App">
+      <Background />
       <Header />
       <NavBar money={money} />
       <Routes>
