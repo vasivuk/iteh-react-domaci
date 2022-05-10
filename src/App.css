@@ -6,6 +6,7 @@
   --primary: #d0c498;
   --blue: #474e99;
   --gold: #a59420;
+  --green: #5ba02e;
 }
 
 *{
@@ -201,6 +202,21 @@
 .part #btn-sell:hover {
   background-color: #583024;
   cursor: pointer;
+}
+
+.levels {
+  border-collapse: collapse;
+}
+
+.level {
+  border: solid 6px var(--brown-darker);
+  background-color: var(--brown);
+  width: 30px;
+  height: 10px;
+}
+
+.acquired {
+  background-color: var(--green);
 }
 
 .footer {

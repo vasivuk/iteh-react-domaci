@@ -30,6 +30,7 @@ function App() {
       price: "10000",
       level: 0,
       image: "https://www.svgrepo.com/show/322989/pirate-cannon.svg",
+      maxlevel: 6,
     },
     {
       id: 2,
@@ -38,6 +39,7 @@ function App() {
       price: "50000",
       level: 0,
       image: "https://svgsilh.com/svg/158936.svg",
+      maxlevel: 3,
     },
     {
       id: 3,
@@ -46,6 +48,7 @@ function App() {
       price: "2000",
       level: 0,
       image: "https://freesvg.org/img/pirate_hat.png",
+      maxlevel: "6",
     },
     {
       id: 4,
@@ -55,6 +58,7 @@ function App() {
       price: "14000",
       level: 0,
       image: "https://www.svgrepo.com/show/40166/anchor.svg",
+      maxlevel: 4,
     },
     {
       id: 5,
@@ -64,6 +68,7 @@ function App() {
       price: "13000",
       level: 0,
       image: "https://freesvg.org/img/captains_wheel.png",
+      maxlevel: 5,
     },
     {
       id: 6,
@@ -72,6 +77,7 @@ function App() {
       price: "43000",
       level: 0,
       image: "https://www.svgrepo.com/show/198988/board-wood.svg",
+      maxlevel: 3,
     },
   ]);
 

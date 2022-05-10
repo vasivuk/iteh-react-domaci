@@ -1,6 +1,7 @@
 import React from "react";
+import Levels from "./levels";
 
-const Part = ({ shipPart }) => {
+const ShipPart = ({ shipPart }) => {
   return (
     <div className="part">
       <h2 className="title">{shipPart.title}</h2>
@@ -8,9 +9,9 @@ const Part = ({ shipPart }) => {
         <img src={shipPart.image} alt="" />
         <p className="description">{shipPart.description}</p>
       </div>
-      <div className="level">x{shipPart.level}</div>
+      <Levels shipPart={shipPart} />
     </div>
   );
 };
 
-export default Part;
+export default ShipPart;
