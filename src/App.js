@@ -10,6 +10,17 @@ import { useState } from "react";
 function App() {
   const [money, setMoney] = useState(500000);
 
+  const [shipParts, setShipParts] = useState([]);
+
+  const refreshShip = () => {
+    const newParts = parts.filter((part) => part.level > 0);
+    setShipParts(newParts);
+  };
+
+  const updateShip = (part) => {
+    setShipParts([...shipParts, part]);
+  };
+
   const [parts, setParts] = useState([
     {
       id: 1,
@@ -44,7 +55,11 @@ function App() {
         if (a >= 0) {
           setMoney(a);
           part.level = part.level + 1;
-          console.log(part.title + " : " + part.level);
+          if (part.level === 1) {
+            updateShip(part);
+          } else {
+            refreshShip();
+          }
         } else {
           alert("Not enough money!");
         }
@@ -59,6 +74,7 @@ function App() {
           const a = parseInt(part.price) + money;
           setMoney(a);
           part.level = part.level - 1;
+          refreshShip();
           console.log(part.title + " : " + part.level);
         } else {
           alert("Part level is already 0");
@@ -78,7 +94,7 @@ function App() {
             <MainSection parts={parts} onBuy={buyPart} onSell={sellPart} />
           }
         />
-        <Route path="/ship" element={<Ship />} />
+        <Route path="/ship" element={<Ship shipParts={shipParts} />} />
       </Routes>
       <Footer />
     </BrowserRouter>
