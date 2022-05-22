@@ -1,5 +1,6 @@
 import React from "react";
 import { GiTwoCoins } from "react-icons/gi";
+import Level from "./level";
 
 const Part = ({ part, onBuy, onSell }) => {
   return (
@@ -12,7 +13,7 @@ const Part = ({ part, onBuy, onSell }) => {
       <div className="sec-3">
         <div className="price">
           <GiTwoCoins className="price" />
-          <span>{part.price}</span>
+          <span>{part.price[part.level]}</span>
         </div>
         <div className="buttons">
           <button id="btn-buy" onClick={() => onBuy(part.id)}>
